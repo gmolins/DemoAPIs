@@ -36,9 +36,9 @@ async def create_user(user: UserBase):
           if existing_user.email == user.email:
                 raise HTTPException(status_code=400, detail="El correo electrónico ya está registrado")
      last_id += 1
-     user.id = last_id
-     fake_db.append(user)
-     return user
+     new_user = User(id=last_id, **user.model_dump())  # Crear una instancia de `User`
+     fake_db.append(new_user)
+     return new_user
 
 # Leer todos los usuarios
 @app.get("/users/", response_model=List[User])
