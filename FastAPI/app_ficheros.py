@@ -11,6 +11,9 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 # Crear (Subir un fichero)
 @app.post("/upload/")
 async def upload_file(file: UploadFile = File(...)):
+    """
+    This endpoint uploads files :) test
+    """
     try:
         file_path = os.path.join(UPLOAD_DIR, file.filename)
         with open(file_path, "wb") as f:

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Items</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    {% include 'header.html' %}
+    <h1>Lista de Items</h1>
+    <ul>
+        {% for item in items %}
+        <li><a href="/items/{{ item.id }}">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <script src="/static/script.js"></script>
+</body>
+</html>

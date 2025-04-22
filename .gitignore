@@ -1,2 +1,32 @@
+# Entornos virtuales
+venv/
 env/
+.env
+*.env
+
+# Archivos de configuración específicos del sistema
+*.pyc
+*.pyo
+*.pyd
 __pycache__/
+*.sqlite3
+
+# Archivos de logs
+*.log
+logs/
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos de dependencias instaladas
+*.egg-info/
+dist/
+build/
+
+# Archivos de configuración de sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de Git
+.git/

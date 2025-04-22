@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productos de FakeStore</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <h1>Productos de FakeStore</h1>
+    <ul>
+        {% for product in products %}
+        <li>
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.description }}</p>
+            <p>Precio: ${{ product.price }}</p>
+            <img src="{{ product.image }}" alt="{{ product.title }}" style="max-width: 150px;">
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/items/">Volver a la lista</a>
+</body>
+</html>
